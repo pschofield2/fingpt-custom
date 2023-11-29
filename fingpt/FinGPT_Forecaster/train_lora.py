@@ -27,8 +27,8 @@ from peft import (
 )
 
 # Replace with your own api_key and project name
-os.environ['WANDB_API_KEY'] = 'ecf1e5e4f47441d46822d38a3249d62e8fc94db4'
-os.environ['WANDB_PROJECT'] = 'fingpt-forecaster'
+os.environ['WANDB_API_KEY'] = '2863ede04a07f141ae75d19396a926db2cb52b16'
+os.environ['WANDB_PROJECT'] = 'fingpt'
 
 
 class GenerationEvalCallback(TrainerCallback):
@@ -86,6 +86,7 @@ def main(args):
     # load model
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
+        token = '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',
         # load_in_8bit=True,
         trust_remote_code=True
     )
