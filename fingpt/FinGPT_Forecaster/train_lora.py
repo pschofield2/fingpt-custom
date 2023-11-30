@@ -109,7 +109,7 @@ def main(args):
     
     original_dataset = datasets.DatasetDict({'train': dataset_train, 'test': dataset_test})
     
-    eval_dataset = original_dataset['test'].shuffle(seed=42).select(range(50)) # might need to change this based on training size
+    eval_dataset = original_dataset['test'].shuffle(seed=42).select(range(8)) # might need to change this based on training size
     
     dataset = original_dataset.map(partial(tokenize, args, tokenizer))
     print('original dataset length: ', len(dataset['train']))
