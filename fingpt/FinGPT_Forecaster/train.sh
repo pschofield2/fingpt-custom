@@ -6,7 +6,7 @@ export TOKENIZERS_PARALLELISM=0
 deepspeed \
 --include localhost:2,3 \
 train_lora.py \
---run_name dow30v3-llama2-5e-5lr-qkvogud \
+--run_name local-test \
 --base_model llama2 \
 --dataset dow30-20230601-20230930-llama,dow30nobasics-20230601-20230930-llama,dow30v3-20221231-20230531-llama*2 \
 --max_length 4096 \
